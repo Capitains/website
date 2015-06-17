@@ -13,6 +13,8 @@ tagline: A tool suite for the CTS Norm
 
 ### Funders
 
+Work on this tool suite has been funded by the [Humboldt Chair of the Digital Humanities at Leipzig](http://www.dh.uni-leipzig.de/wo/) and the [Andrew W. Mellon Foundation](http://www.mellon.org/).
+
 ##Blogs :
 
 <ul class="posts">
