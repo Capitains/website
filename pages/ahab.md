@@ -82,6 +82,39 @@ Example query : `ahab?request=Search&query=ἀλλήλους&urn=urn:cts:greekLi
 
 #### JSON Reply schema
 
+{% highlight json %}
+{
+  "reply": {
+    "count": "2",
+    "limit": 10,
+    "offset": 1,
+    "results": [
+      {
+        "passage": "urn:cts:latinLit:phi1294.phi002.perseus-lat2:3.20.6",
+        "text": {
+          "after": "elegis an severus herois?",
+          "hi": "Lascivus",
+          "previous": ""
+        },
+        "urn": "urn:cts:latinLit:phi1294.phi002.perseus-lat2"
+      },
+      {
+        "passage": "urn:cts:latinLit:phi0959.phi007.perseus-lat2:4.701",
+        "text": {
+          "after": "in aevo ",
+          "hi": "lascivus",
+          "previous": " filius huius erat primo"
+        },
+        "urn": "urn:cts:latinLit:phi0959.phi007.perseus-lat2"
+      }
+    ]
+  },
+  "request": {
+    "query": "lascivus",
+    "urn": "urn:cts:latinLit"
+  }
+}
+{% endhighlight %}
 ### Permalink
 **Purpose**: Permalink is a tool to help retrieve a urn on a CTS api. CTS API are based on the prerequisite to know the right inventory. If the API has more than one inventory, having this tool can help external users to find a text without knowing their inventory.
 
