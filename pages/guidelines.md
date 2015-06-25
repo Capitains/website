@@ -82,8 +82,82 @@ As you see, the `@replacementPattern` is an xpath, using $1 to represent the inf
 
 ###Urn informations
 
+The guidelines are quite simple regarding the urn information. As the CTS Inventory requires to include the online path to an element (`//(ti:edition|ti:translation)/ti:online/@docname`), the solution to avoid any relative or software specific issue is to give the original file the urn reference.
+
+To do so, for TEI files (which are the only one supported right now by the tool suite), there is two different recommendations :
+
+1. If the text is epidoc, the convention is to set it in the following xpath : `TEI/text/body/div[@type="edition"]/@n` 
+2. If the text is plain TEI, the convention is to set it in the following xpath : `TEI/text/@n`
+
 ###Epidoc or TEI ?
 
-## CTS Metadata files
+*Big discussion to happen here*
 
-## Packaging for easy install
+## CTS Package
+
+### Directory naming conventions
+
+Even if it is not strictly required, the directory and files should be named according to the following convention :
+
+{% highlight xml %}
+data/
+    |- textgroup
+        |- work
+            |- full-urn.xml
+{% endhighlight %}
+
+Which would give for a translation and an edition of the Illiad, and Martial's Epigrammata and Liber de Spectaculis :
+
+{% highlight xml %}
+data/
+    |- phi1294
+        |- phi001
+            |- phi1294.phi001.perseus-lat2.xml
+        |- phi002
+            |- phi1294.phi002.perseus-lat2.xml
+    |- tlg0012
+        |- tlg001
+            |- tlg0012.tlg001.perseus-grc1.xml
+            |- tlg0012.tlg001.perseus-eng2.xml
+{% endhighlight %}
+
+### CTS Inventory Metadata for file
+
+To build and to have an easy maintenance, the choice was made to cut inventory files into metadata files, which can be used then in the InventoryMaker to create inventory for the API. Each semantic level of folder (*ie* phi1294, phi001...) must contain a file name `__cts__.xml`.
+
+#### Textgroup \_\_cts\_\_.xml 
+
+{% highlight xml %}
+<ti:textgroup xmlns:ti="http://chs.harvard.edu/xmlns/cts" urn="urn:cts:latinLit:phi1294">
+    <ti:groupname xml:lang="eng">Martial</ti:groupname>
+    <ti:groupname xml:lang="lat">Marcus Valerius Martialis</ti:groupname>
+</ti:textgroup>
+{% endhighlight %}
+
+*Note : * Obviously, you don't need to put Latin or whatever translation of the groupname. We just wanted to show you it's possible. It's actually possible for every `@xml:lang` enable tag.
+
+#### Work \_\_cts\_\_.xml 
+
+{% highlight xml %}
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts" groupUrn="urn:cts:latinLit:phi1294" urn="urn:cts:latinLit:phi1294.phi002">
+    <ti:title xml:lang="eng">Epigrammata</ti:title>
+    <!-- For each "text", either edition or translation, there should be a ti:edition or ti:translation node -->
+    <ti:edition workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-lat2">
+        <ti:label xml:lang="eng">Epigrammata</ti:label>
+        <ti:description xml:lang="eng">
+            M. Valerii Martialis Epigrammaton libri / recognovit W. Heraeus
+        </ti:description>
+        <!-- 
+            As you can see, there is no <online /> tag here.
+            Simply because they are environment dependant.
+            And so they are generated upon full inventory generation, hence the cRefPattern convention
+        -->
+    </ti:edition>
+    <ti:translation workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-eng2">
+        <ti:label xml:lang="eng">Epigrammata</ti:label>
+        <ti:description xml:lang="eng">Nice translations informations</ti:description>
+    </ti:translation>
+</ti:work>
+{% endhighlight %}
+
+### Packaging for eXistDB install
