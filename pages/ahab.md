@@ -6,13 +6,16 @@ description: "Description of the Ahab Service Norm"
 ---
 {% include JB/setup %}
 
+* TOC
+{:toc}
+
 ## Introduction
 
 Ahab has implementations for [eXistDB restxq](http://github.com/Capitains/Ahab-eXistDB) and a [cache layer written for Flask](http://github.com/Capitains/Ahab) (Python web app). Ahab provides new functionnalities to CTS repositories, using CTS as its basic informations.
 
 Addition to Ahab are welcome, either as implementations or as requests ! Ahab is a norm, not a software !
 
-## Implemantations
+## Implementations
 
 - [Ahab-ExistDB](http://github.com/Capitains/Ahab-eXistDB) : Implementation of the Ahab API for eXistDB restxq services
 
@@ -30,6 +33,7 @@ Ahab supports two different URL naming convention, and both should be supported 
 ### Search
 **Purpose**: Search proposes to do fulltext search on a specific area of a CTS API.
 
+{:.table}
 | Parameter | Type | Required/optional | Description |  
 |  ------   | ---- | ----------------- | ----------- | 
 | urn       | str  | Required          |  |
@@ -44,6 +48,7 @@ Ahab supports two different URL naming convention, and both should be supported 
 ### Permalink
 **Purpose**: Permalink is a tool to help retrieve a urn on a CTS api. CTS API are based on the prerequisite to know the right inventory. If the API has more than one inventory, having this tool can help external users to find a text without knowing their inventory.
 
+{:.table}
 | Parameter | Type | Required/optional | Description |  
 |  ------   | ---- | ----------------- | ----------- | 
 | urn       | str  | Required          |  |

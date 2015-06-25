@@ -7,6 +7,15 @@ description: ""
 ---
 {% include JB/setup %}
 
+**Index :**
+
+* TOC
+{:toc}
+- Resources 
+    - [Ant Build.xml Example](build.html)
+    - [eXistDB collection.xconf Example](xconf.html)
+
+
 *Warning* : The following guidelines ensure that your work will be fully compliant with all resources available in Capitains Tool suite. Most of them are written in regard of Inventory Maker or eXistDB way to package informations.
 
 ## General arguments
@@ -164,6 +173,6 @@ To build and to have an easy maintenance, the choice was made to cut inventory f
 
 While it's not necessary to use eXistDB, relying on it might help you as it is fully compliant with every xQuery app we have been developping for now. Our tools are focused on that right now, and we are happy to see developers expand their compatibility with other native xml database such as MarkLogic or BaseX.
 
-There is a simple way to generate your package : eXistDB's eXide app. You can see a tutorial in the [Tutorial tab](../tutorial.html). Once you have done that, just change the build.xml according to the one available on this [page](build.html)
+There is a simple way to generate your package : eXistDB's eXide app. You can see a tutorial in the [Tutorial tab](../tutorial.html). Once you have done that, just change the build.xml according to the one available on this [page](build.html) and replace or create the collection.xconf file [with this skeletton](xconf.md)
 
 Put your xml resources in the data folder, do a `ant build` at the root of your repository : You are ready for eXistDB tools !
