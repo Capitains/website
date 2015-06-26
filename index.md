@@ -1,10 +1,18 @@
 ---
 layout: page
-title: Capitains Organisation
+title: Capitains
 tagline: A tool suite for the CTS Norm
 ---
 
-## Relevant documentations
+## Internal documentation 
+
+<ul>
+{% assign pages_list = site.pages %}
+{% assign group = 'navigation' %}
+{% include JB/pages_list %}
+</ul>
+
+## External documentations
 
 - [Capitains Sparrow (Javascript abstraction for CTS) API Documentation](http://capitains.github.io/Sparrow)
 
@@ -12,7 +20,7 @@ tagline: A tool suite for the CTS Norm
 
 ### Institutions
 ![Perseids](http://perseids.org/perseids_banner31.png)
-
+![Perseids](./assets/images/perseus.png)
 ![DH Leipzig](http://www.dh.uni-leipzig.de/wo/wp-content/uploads/2014/03/logo_dh_wid-300x57.png)
 
 ### Funders
