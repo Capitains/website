@@ -19,9 +19,9 @@ tagline: A tool suite for the CTS Norm
 ## Collaborators
 
 ### Institutions
-![Perseids](http://perseids.org/perseids_banner31.png =200px)
-![Perseids](./assets/images/perseus.png =200px)
-![DH Leipzig](http://www.dh.uni-leipzig.de/wo/wp-content/uploads/2014/03/logo_dh_wid-300x57.png =200px)
+![Perseids](http://perseids.org/perseids_banner31.png|200px)
+![Perseids](./assets/images/perseus.png|200px)
+![DH Leipzig](http://www.dh.uni-leipzig.de/wo/wp-content/uploads/2014/03/logo_dh_wid-300x57.png|200px)
 
 ### Funders
 
