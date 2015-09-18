@@ -2,9 +2,8 @@
 layout: page
 title: Capitains
 tagline: A tool suite for the CTS Norm
+logo: /assets/images/logo.png
 ---
-
-<img src="{{ BASE_PATH }}/assets/images/logo.png" width="200px"/>
 
 ## Internal documentation 
 
