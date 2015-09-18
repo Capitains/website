@@ -21,11 +21,11 @@ body {
 #footer {
   height:54px;
   border-top:4px solid #B5B1B1;
-  line-height: 25px;
   background-color:#FFFFFF!important; 
 }
 
 #footer p {
-  line-height: 30px;
-  margin-bottom: 0px;
+  line-height: 50px;
+  margin: 0;
+  padding:0;
 }
