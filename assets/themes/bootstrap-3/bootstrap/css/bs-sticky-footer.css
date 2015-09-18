@@ -12,9 +12,9 @@ body {
   min-height: 100%;
   height: auto;
   /* Negative indent footer by its height */
-  margin: 0 auto -54px;
+  margin: 0 auto -60px;
   /* Pad bottom by footer height */
-  padding: 0 0 54px;
+  padding: 0 0 60px;
 }
 
 /* Set the fixed height of the footer here */
@@ -22,7 +22,8 @@ body {
   height:54px;
   border-top:4px solid #B5B1B1;
   line-height: 25px;
-  background-color:white; margin-top:10px;
+  background-color:#FFFFFF!important; 
+  margin-top:10px;
 }
 
 #footer p {
