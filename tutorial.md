@@ -10,11 +10,11 @@ description: ""
 <div class="col-md-6">
 ## Install the CTS API & Inventory Maker
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Fv4pbfrVB1M" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/Fv4pbfrVB1M" frameborder="0" allowfullscreen></iframe>
 </div>
 <div class="col-md-6">
 ## Creation of eXistDB Package
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bTee3RT9LNQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="auto" src="https://www.youtube.com/embed/bTee3RT9LNQ" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
