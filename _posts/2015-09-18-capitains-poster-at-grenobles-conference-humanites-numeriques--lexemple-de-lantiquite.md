@@ -10,6 +10,6 @@ tags: [conference,poster,dh,france]
 
 We had the chance to participate at the Grenoble's conference "Humanites numeriques : l'exemple de l'antiquite". For this special conference, Rafael Lopes, a French designer, created for us a poster presenting the software developed in Capitains :
 
-[A flexible tool suite for serving and managing interoperable corpora]({{ BASE_PATH }}/assets/grenoble-poster.pdf)
+![A flexible tool suite for serving and managing interoperable corpora]({{ BASE_PATH }}/assets/papers/grenoble-poster.pdf)
 
-<iframe src="{{ BASE_PATH }}/assets/grenoble-poster.pdf" width="100%" height="100%"></iframe>
+<iframe src="{{ BASE_PATH }}/assets/papers/grenoble-poster.pdf" width="100%" height="100%"></iframe>
