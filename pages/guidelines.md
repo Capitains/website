@@ -61,9 +61,9 @@ Citation Mapping:
 
 {% highlight xml %}
  <citationMapping>
-    <citation label="Book" xpath="/div1[@n='?']" scope="/TEI.2/text/body">
-        <citation label="Line" xpath="//l[@n='?']"
-            scope="/TEI.2/text/body/div1[@n='?']"/>
+    <citation label="Book" xpath="/tei:div1[@n='?']" scope="/tei:TEI/tei:text/tei:body">
+        <citation label="Line" xpath="//tei:l[@n='?']"
+            scope="/tei:TEI/tei:text/tei:body/tei:div1[@n='?']"/>
     </citation>
 </citationMapping>
 {% endhighlight %}
@@ -75,13 +75,13 @@ And as CREF
  <cRefPattern 
    n="line"
    matchPattern="(.+).(.+)"
-   replacementPattern="#xpath(/TEI.2/text/body/div[@n='$1']//l[@n='$2'])">
+   replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:l[@n='$2'])">
   <p>This pointer pattern extracts book and line</p>
  </cRefPattern>
  <cRefPattern 
    n="book"
    matchPattern="(.+)"
-   replacementPattern="#xpath(/TEI.2/text/body/div[@n='$1'])">
+   replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
   <p>This pointer pattern extracts book.</p>
  </cRefPattern>
 </refsDecl>
