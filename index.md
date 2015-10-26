@@ -5,6 +5,12 @@ tagline: A tool suite for the CTS Norm
 logo: /assets/images/logo.png
 ---
 
+## Citation
+
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.32701.svg)](http://dx.doi.org/10.5281/zenodo.32701)
+
+`Thibault Clérice et al.. (2015). Capitains Guidelines for CTS. Zenodo. 10.5281/zenodo.32701`
+
 ## Internal documentation 
 
 <ul>
