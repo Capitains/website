@@ -27,7 +27,7 @@ CTS requires two main component's types, texts and metadata (or inventory inform
 
 Bridget Almas and Thibault Clérice are the original developers of these guidelines. A special mention to Michael Gursky who first put the idea out there of this directory structure as well as the metadata splitting.
 
-## CTS URN Choice
+## CTS URN Choice
 
 URN choice is quite often one of the first question people ask when trying to decided wether or not CTS is good for them, and it often feels to us that it prevents people to actually adopt the standard. Here is a list of language with recommandations for your language choice. If you want to provide 
 
