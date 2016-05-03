@@ -30,7 +30,6 @@ production_url : http://capitains.github.io
 #
 JB :
   version : 0.3.0
-  bootswatch-theme: cerulean
   # All links will be namespaced by BASE_PATH if defined.
   # Links in your website should always be prefixed with {{BASE_PATH}}
   # however this value will be dynamically changed depending on your deployment situation.
