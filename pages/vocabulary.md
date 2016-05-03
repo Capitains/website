@@ -3,12 +3,9 @@ layout: page
 title: "Vocabulary"
 header: "Vocabulary"
 group: navigation
-description: ""
+description: "This table has been written by B. Almas and H. Cayless in the context of the Distributed Text Services efforts."
 ---
 
-## CTS Vocabulary
-
-This table has been written by B. Almas and H. Cayless in the context of the Distributed Text Services efforts.
 
 | CTS         | LAWD                  | FRBR       | Concept                             | Notes                                                                                                                                                                                                                                                                                                      |
 |-------------|-----------------------|------------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
