@@ -11,23 +11,48 @@ description: ""
 
 * TOC
 {:toc}
-- Resources 
-    - [Ant Build.xml Example](build.html)
-    - [eXistDB collection.xconf Example](xconf.html)
 
 
-The following guidelines ensure that your work will be fully compliant with all resources available in Capitains Tool suite.
-                                                                                                                                                                                            |
+The following guidelines ensure that your work will be fully compliant with all resources available in Capitains Tool suite. If you are not too familiar with CTS, please see the [Vocabulary](/pages/vocabulary.html).
 
-## General arguments
+## Forewords
 
-Ideally, a CTS API implementation should be able to work with both a traditional full CTS inventory, as well as with directory structure conventions, metadata fragments, and the TEI RefsDecl header. There are several reasons for supporting the naming convention/metadata fragment approach:
+CapiTainS guidelines are the results of years of strugle with Perseus data maintenance. When one maintainer would try to update a typo, it could takes hours and days to update the servers to serve the correct data. In 2013, Perseus took the decision to implement CTS (Canonical Text Services) as a big step towards Linked Open Data. The idea behind the CTS API implementation would be to ideally build a new Perseus on microservices to resolve the maintainability issues it had as well as serve data in a decentralized fashion to external data users.
 
-1. As the number of texts increases, a single large XML file containing the entire inventory becomes unmanageable
-2. Texts can be added and removed easily without requiring updates to a master file.
-3. It avoids redundancy and duplication of information, particularly with regard to the citation mapping information which should be contained in the TEI XML file anyway.
+All implementation of CTS up to CapiTainS' ones were focused principally on technologies that would not implement, in a rather balanced way, scalability and maintanability. While CapiTainS itself does not enforce the use of its own APIs software, the CapiTainS guidelines were built to explicitly state CTS related informations in text files so that it could be reused in different situation, by different softwares with clear metadata information provided.
 
-## TEI Markup
+CTS requires two main component's types, texts and metadata (or inventory information). They provides data consumers with all required informations, from edition informations to textual node, including citation scheme informations. CapiTainS splitted these informations so that the Citation Scheme is an inherent part of the text, using traditional TEI capacities, while all other metadata can be found in separated files. The reasoning behind this split was to allow for separate maintenance of general metadata - used to browse a catalog of texts - and texts metadata such as the citation scheme. Finally, the directory structure of CapiTainS allows a much simpler browsing method for finding, adding, updating resources in a repository:  by separating resources by URN levels, it brings ease of maintenance. 
+
+## Participants 
+
+Bridget Almas and Thibault Clérice are the original developers of these guidelines. A special mention to Michael Gursky who first put the idea out there of this directory structure as well as the metadata splitting.
+
+## CTS URN Choice
+
+URN choice is quite often one of the first question people ask when trying to decided wether or not CTS is good for them, and it often feels to us that it prevents people to actually adopt the standard. Here is a list of language with recommandations for your language choice. If you want to provide 
+
+| ISO 639-2 | Language | Type of text | Recommandation |
+|-----------|----------|--------------|----------------|
+| ara       | Classical Arabic | Literature |  Use the CTS Namespace "greekLit". Refer to the [Perseus' Catalog](http://catalog.perseus.org) to find the work urn. Do not mind contacting them |
+| fro       | Medieval French | Literature | Use the CTS namespace "froLit". Use the Jonas database permalinks number to chose your textgroup and work identifiers : http://jonas.irht.cnrs.fr/ , *eg* the [Vie de Saint Martin](http://jonas.irht.cnrs.fr/oeuvre/1856) of [Wauchier de Denain](http://jonas.irht.cnrs.fr/intervenant/915) should be `urn:cts:jns915.jns1856` |
+| grc       | Ancient Greek    | Classical Literature   | Use the CTS Namespace "greekLit". Refer to the [Perseus' Catalog](http://catalog.perseus.org) to find the work urn. Do not mind contacting them |
+| grc       | Ancient Greek    | Inscriptions | Need documentation. |
+| grc       | Ancient Greek    | Papyrii | Need documentation. |
+| lat       | Latin    | Classical Literature   | Use the CTS Namespace "latinLit". Refer to the [Perseus' Catalog](http://catalog.perseus.org) to find the work urn. Do not mind contacting them |
+| lat       | Latin    | Inscriptions | Need documentation. |
+| lat       | Latin    | Papyrii | Need documentation. |
+
+Finally, for the last part of the urn (the edition or translation identifier), we recommend to use the name of your project or lab, followed by a dash, an iso 639-2 code and a number that you could increment should you provide other editions, *eg* ciham-fro1, perseus-eng1, opp-lat1, etc.
+
+In general, a CTS URN should be lowercase only and be as short as possible. If it uses external identifier, the identifier provider (tlg, stoa, jns) should be part of the scheme. Feel free to contact us by github or [by mail](mailto:capitains[at]googlegroups.com) if you need help or want to propose a provided
+
+## Directory structure
+
+## Metadata Files
+
+## TEI XML
+
+## Related tools
 
 ###RefsDecl element
 
