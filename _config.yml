@@ -24,7 +24,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://capitains.github.io
+production_url : http://Capitains.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -100,7 +100,7 @@ JB :
   analytics :
     provider : google
     google : 
-        tracking_id : 'UA-77268535-1'
+      tracking_id : 'UA-77268535-1'
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
