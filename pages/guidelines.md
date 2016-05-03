@@ -58,7 +58,7 @@ In general, a CTS URN should be lowercase only and be as short as possible. If i
 6. The work directory contains a `__cts__.xml` file ([see below](#Work_Metadata_Files)) containing metadata about the work, editions and translations.
 7. Edition' and translation' files are named after their urn using every component except the namespace. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would be phi1294.phi002.perseus-lat2.*
 
-{% highlight %}
+{% highlight xml %}
 data/
   |- textgroup
     |- __cts__.xml
@@ -69,7 +69,7 @@ data/
 
 **Example**
 
-{% highlight %}
+{% highlight xml %}
 data/
   |- phi1294
     |- __cts__.xml
@@ -178,27 +178,42 @@ The same node should have an `xml:lang` attribute stating the language of the te
 
 ### Citation informations
 
-The RefsDecl in the teiHeader of the TEI XML files must accurately represent the canonical citation scheme of the document. If we use the [cRefPattern](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cRefPattern.html) syntax for this element to define the Xpaths and citation mapping patterns it should allow us to be able to automatically contruct the CTS citationMapping components of the CTS TextInventory for any given text.
+The citation scheme is reflected in a refsDecl node, in the teiHeader's encodingDesc of the edition or the translation. In this refsDecl, we use [cRefPattern](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cRefPattern.html) nodes to define citations levels and their xpath. It holds explicitly the passage informations. For cross-language compatibility, it is recommended to use only XPath 1, which is the latest one implemented in the lxml library used by C, PhP and Python.
 
-Example from [http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SACR](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SA.html#SACR):
+- refsDecl should be in /TEI/teiHeader/encodingDesc.
+- refsDecl should have its @n property set on "CTS"
+- refsDecl contains as many cRefPattern as there is levels
+- cRefPattern are ordered from deeper node to highest node
+- the matchPattern should give an information about the number of level. Traditionnally, we use (\w+) regexp to match identifiers
+- the replacementPattern should contain $[1-9] which represents depth of a level, ie. this book passage 1.pr.8 should match the following xpath : /tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='1']/tei:div[@n='pr']/tei:div[@n='9']
+- There is no tag restriction in this xpath. You can use tei:w, tei:seg, tei:p, etc.
+- the @n attributes represents the name of the level, usually book, poem, line, section, chapter, paragraph, argument, etc. 
+- the @n attribute should always be lowercase.
+- cRefPattern can include paragraphs which translates matchPattern and level hierarchy into human readable information
 
 {% highlight xml %}
 <refsDecl n="CTS">
- <cRefPattern 
-   n="line"
-   matchPattern="(.+).(.+)"
-   replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1']//tei:l[@n='$2'])">
-  <p>This pointer pattern extracts book and line</p>
- </cRefPattern>
- <cRefPattern 
-   n="book"
-   matchPattern="(.+)"
-   replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@n='$1'])">
-  <p>This pointer pattern extracts book.</p>
- </cRefPattern>
+  <cRefPattern 
+      n="level3"
+      matchPattern="(\w+).(\w+).(\w+)"
+      replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2']/tei:div[@n='$3'])">
+      <p>This pointer pattern extracts level1 and level2 and level3</p>
+  </cRefPattern>
+  <cRefPattern 
+      n="level2"
+      matchPattern="(\w+).(\w+)"
+      replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1']/tei:div[@n='$2'])">
+      <p>This pointer pattern extracts level1 and level2</p>
+  </cRefPattern>
+  <cRefPattern 
+      n="level1"
+      matchPattern="(\w+)"
+      replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+      <p>This pointer pattern extracts level1</p>
+  </cRefPattern>
 </refsDecl>
 {% endhighlight %}
 
-As you see, the `@replacementPattern` is an xpath, using $1 to represent the information required to identify an element. The `@matchPattern` simply follows the CTS citation system (*ie* 1.pr.2). Finally, `@n` provides the future inventory informations about the label of the citation (*ie* line, life, book, poem, section, etc.)
-
 ## Related tools
+
+You can be interested by our CookieCutter resources to kickstart your repository ([Tutorial]())
