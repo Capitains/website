@@ -214,7 +214,7 @@ The citation scheme is reflected in a refsDecl node, in the teiHeader's encoding
 </refsDecl>
 {% endhighlight %}
 
-## Related tools
+## Related tools
 
 - CookieCutter template to kickstart your repository [Link](https://github.com/Capitains/cookiecutter-guidelines), [Tutorial with docker](https://www.youtube.com/watch?v=pke1nPjhpuI)
 - [Testing CapiTainS Resources locally with Hook](https://www.youtube.com/watch?v=0J3RvVyMf_k)
