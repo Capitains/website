@@ -167,7 +167,7 @@ Instead of relying on edition and translation TEI files or building a general in
 
 ## TEI XML
 
-### URN Informations
+### URN Informations
 
 There is two different recommendations :
 
@@ -176,7 +176,7 @@ There is two different recommendations :
 
 The same node should have an `xml:lang` attribute stating the language of the text.
 
-### Citation informations
+### Citation informations
 
 The citation scheme is reflected in a refsDecl node, in the teiHeader's encodingDesc of the edition or the translation. In this refsDecl, we use [cRefPattern](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cRefPattern.html) nodes to define citations levels and their xpath. It holds explicitly the passage informations. For cross-language compatibility, it is recommended to use only XPath 1, which is the latest one implemented in the lxml library used by C, PhP and Python.
 
