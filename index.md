@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Capitains
-tagline: A tool suite for the CTS Norm
+tagline: A tool suite for the CTS Standard
 logo: /assets/images/logo.png
 ---
 
@@ -24,7 +24,7 @@ logo: /assets/images/logo.png
 - [Capitains Sparrow (Javascript abstraction for CTS) API Documentation](http://capitains.github.io/Sparrow)
 - [Capitains MyCapytain (Python Abstraction for CTS) Documentation](http://mycapytain.readthedocs.org/)
 
-##Blogs :
+## Blogs :
 
 <ul class="posts">
   {% for post in site.posts %}
