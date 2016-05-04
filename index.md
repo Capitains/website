@@ -11,12 +11,13 @@ CapiTainS is an informal open-source organization which aims at providing a suit
 
 ## Why you should browse and use our tools (and stay on this website longer)
 
-- you have texts which you would like to make available a **digital editions**
+- you have texts which you would like to make available as **digital editions**
 - you care about people having access to your **open data**
 - you want to **make linked open data a thing** without too much investment
 - you want to **showcase your work** without too much development
 - you want to **participate in a global effort of making data open and standard**
 - as a **data consummer**, you want to **use CTS API** but you do not want to code everything yourself
+- you are cool.
 
 ## Our (quite rare) blogs :
 
