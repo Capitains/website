@@ -12,6 +12,8 @@ description: ""
 * TOC
 {:toc}
 
+![CapiTainS](/assets/images/logo.png)
+
 CapiTainS tool suite is large and the naming can be sometime painful to remember. Here is a reminder and description of every tool we develop.
 
 ## Language Libraries
