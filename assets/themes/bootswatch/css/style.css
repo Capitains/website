@@ -9,3 +9,6 @@ a {
     color: #165ba8;
     text-decoration: none;
 }
+.navbar[role="navigation"] {
+  border-radius: none;
+}
