@@ -3,9 +3,12 @@ layout: page
 title: "Vocabulary"
 header: "Vocabulary"
 group: navigation
-description: "This table has been written by B. Almas and H. Cayless in the context of the Distributed Text Services efforts."
+description: ""
 ---
 
+## CTS concepts equivalency table
+
+This table has been written by B. Almas and H. Cayless in the context of the Distributed Text Services efforts.
 
 | CTS         | LAWD                  | FRBR       | Concept                             | Notes                                                                                                                                                                                                                                                                                                      |
 |-------------|-----------------------|------------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -17,3 +20,7 @@ description: "This table has been written by B. Almas and H. Cayless in the cont
 | Translation | Translation           | Expression | Digital Edition                     | a CTS Edition is a type of a CTS version, with the restriction that it must be an expression of a work in a different language than the original source language of the work                                                                                                                               |
 | Exemplar    | n/a                   | Item       | Derived Resource                    | The HMT has been using Exemplars to represent specific derivations of a CTS version created for the purpose of analysis and unambiguous citation at the level of the token. E.g. a tokenization by morphemes. This might be more of a derivation than an interpretation but it has elements of both.       |
 | Passage     | Citation              | N/A        | Resource Fragment                   | a CTS Passage identifies a singe citable section of a work - it might be a single "node" or a range of "nodes" 
+
+## CTS Request Diagram
+
+![CTS Request Diagram](/assets/images/CTS_Calls.png)
