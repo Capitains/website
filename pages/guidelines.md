@@ -59,18 +59,18 @@ In general, a CTS URN should be lowercase only and be as short as possible. If i
 6. The work directory contains a `__cts__.xml` file ([see below](#Work_Metadata_Files)) containing metadata about the work, editions and translations.
 7. Edition and translation files are named after their urn using every component except the namespace. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would be phi1294.phi002.perseus-lat2.*
 
-{% highlight xml %}
+```
 data/
   |- textgroup
     |- __cts__.xml
     |- work
       |- __cts__.xml
       |- full-urn.xml
-{% endhighlight %}
+```
 
 **Example**
 
-{% highlight xml %}
+```
 data/
   |- phi1294
     |- __cts__.xml
@@ -86,7 +86,7 @@ data/
       |- __cts__.xml
       |- tlg0012.tlg001.perseus-grc1.xml
       |- tlg0012.tlg001.perseus-eng2.xml
-{% endhighlight %}
+```
 
 ## Metadata Files
 
@@ -94,7 +94,7 @@ Instead of relying on edition and translation TEI files or building a general in
 
 ### Textgroup Metadata File
 
-{% highlight xml %}
+```xml
 <!-- 
   The urn of the textgroup node must contains only the urn up to the textgroup component
 -->
@@ -107,11 +107,11 @@ Instead of relying on edition and translation TEI files or building a general in
     <ti:groupname xml:lang="eng">Martial</ti:groupname>
     <ti:groupname xml:lang="lat">Marcus Valerius Martialis</ti:groupname>
 </ti:textgroup>
-{% endhighlight %}
+```
 
 ### Work Metadata File
 
-{% highlight xml %}
+```xml
 <!--
   The work node has three attributes :
     - The first one, groupUrn, contains only the urn up to the textgroup component
@@ -165,7 +165,7 @@ Instead of relying on edition and translation TEI files or building a general in
         <ti:description xml:lang="eng">Nice translations informations</ti:description>
     </ti:translation>
 </ti:work>
-{% endhighlight %}
+```
 
 ## TEI XML
 
@@ -193,7 +193,7 @@ The citation scheme is reflected in a refsDecl node, in the teiHeader's encoding
 - the @n attribute should always be lowercase.
 - cRefPattern can include paragraphs which translate matchPattern and level hierarchy into human readable information
 
-{% highlight xml %}
+```xml
 <refsDecl n="CTS">
   <cRefPattern 
       n="level3"
@@ -214,7 +214,7 @@ The citation scheme is reflected in a refsDecl node, in the teiHeader's encoding
       <p>This pointer pattern extracts level1</p>
   </cRefPattern>
 </refsDecl>
-{% endhighlight %}
+```
 
 ## Related tools
 
