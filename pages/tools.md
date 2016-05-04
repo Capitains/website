@@ -100,7 +100,7 @@ Hook is a suite of resources providing a test environment to check for CapiTainS
 
 ### Hook (Web User Interface)
 
-[![CapiTainS Ahab](/assets/images/Hook.png)](https://github.com/capitains/Hook)
+[![CapiTainS Hook](/assets/images/Hook.png)](https://github.com/capitains/Hook)
 
 This app is providing a frontend for tracking tests results and github repositories on a hosting plan. It provides user account, continuous integration test to connect with Github repositories : Push and Pull Requests triggers automatic tests through this UI.
 
@@ -111,7 +111,7 @@ This app is providing a frontend for tracking tests results and github repositor
 
 ### Hook Worker and Hook API
 
-[![CapiTainS Ahab](/assets/images/Hook_Worker.png)](https://github.com/capitains/Hook-Worker)
+[![CapiTainS HookWorker](/assets/images/Hook_Worker.png)](https://github.com/capitains/Hook-Worker)
 
 Hook-Worker is a component which provides a simple API interface to dispatch test to a Redis Queue so that tests are run on a machine. It allows to explicitly dispatch concerns between the UI, the Tests Queue and the Test Machines.
 
@@ -121,7 +121,9 @@ Hook-Worker is a component which provides a simple API interface to dispatch tes
 
 ### Hook Test
 
-[![CapiTainS Ahab](/assets/images/Hook_Test.png)](https://github.com/capitains/HookTest)
+[![CapiTainS HookTest](/assets/images/Hook_Test.png)](https://github.com/capitains/HookTest)
+
+HookTest is the testing software component which provides results. It can be used in other softwares (such as HookTest) or used as its own commandline tool.
 
 **Relates resources** :
 
