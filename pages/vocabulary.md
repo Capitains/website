@@ -10,6 +10,7 @@ description: ""
 
 This table has been written by B. Almas and H. Cayless in the context of the Distributed Text Services efforts.
 
+{: .table .table-striped .table-hover}
 | CTS         | LAWD                  | FRBR       | Concept                             | Notes                                                                                                                                                                                                                                                                                                      |
 |-------------|-----------------------|------------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Namespace   | N/A                   | N/A        | Naming Authority, Collection        | The intent of the CTS namespace was to serve as a naming authority for a set of CTS URN identifiers in order to be able to declare uniqueness of all textgroup identifiers only within the scope of a given namespace. In practice, this has been interpreted mainly as a Collection or Corpus identifier. |
