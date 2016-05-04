@@ -10,5 +10,5 @@ a {
     text-decoration: none;
 }
 .navbar[role="navigation"] {
-  border-radius: none;
+  border-radius: 0;
 }
