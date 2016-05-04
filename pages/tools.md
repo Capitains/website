@@ -20,7 +20,7 @@ CapiTainS tool suite is large and the naming can be sometime painful to remember
 
 [![CapiTainS Sparrow](/assets/images/Sparrow.png)](https://github.com/capitains/MyCapytain)
 
-### MyCapytain (Python)
+### MyCapytain (Python)
 
 [![CapiTainS MyCapytain](/assets/images/My_Capytain.png)](https://github.com/capitains/MyCapytain)
 
@@ -32,7 +32,7 @@ CapiTainS tool suite is large and the naming can be sometime painful to remember
 
 ## Frameworks and Softwares
 
-### Nemo for Flask (Python)
+### Nemo for Flask (Python)
 
 [![CapiTainS Nemo for Flask](/assets/images/Nemo.png)](https://github.com/capitains/flask-capitains-nemo)
 
