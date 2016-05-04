@@ -15,13 +15,13 @@ description: ""
 
 The following guidelines ensure that your work will be fully compliant with all resources available in the Capitains Tool suite. If you are not too familiar with CTS, please see the [Vocabulary](/pages/vocabulary.html). You can find a documented example repository at [https://github.com/Capitains/documented-repo](https://github.com/Capitains/documented-repo).
 
-## Forewords
+## Foreword
 
 CapiTainS guidelines are the results of years of struggle with Perseus data maintenance. When one maintainer would try to update a typo, it could takes hours and days to update the servers to serve the correct data. In 2013, Perseus made the decision to implement CTS (Canonical Text Services) as a big step towards Linked Open Data. The idea behind the CTS API implementation would be to ideally build a new Perseus on microservices to resolve the maintainability issues it had as well as to serve data in a decentralized fashion to external data users.
 
-All implementations of CTS up to the CapiTainS' ones were focused principally on technologies that would not implement, in a rather balanced way, scalability and maintanability. While CapiTainS itself does not enforce the use of its own APIs software, the CapiTainS guidelines were built to explicitly state CTS related information in text files so that it could be reused in different situations, by different software with clear metadata information provided.
+All implementations of CTS up to the CapiTainS' ones were focused principally on technologies that had some limitations with regard to either scalability or maintanability or both. CapiTainS, being standards compliant, does not require the use of its own API implementation. The CapiTaiNs components are interoperable with other CTS-compliant components. The CapiTainS guidelines were built to explicitly state CTS related information in text files so that it could be reused in different situations, by different software with clear metadata information provided.
 
-CTS requires two main component types, texts and metadata (or inventory information). They provides data consumers with all required information, from edition information to textual node, including citation scheme information. CapiTainS split this information so that the Citation Scheme is an inherent part of the text, using traditional TEI capacities, while all other metadata can be found in separate files. The reasoning behind this split was to allow for separate maintenance of general metadata - used to browse a catalog of texts - and text metadata such as the citation scheme. Finally, the directory structure of CapiTainS allows a much simpler browsing method for finding, adding, updating resources in a repository:  by separating resources by URN levels, it brings ease of maintenance. 
+CTS requires two main component types, texts and metadata (or inventory information). They provide data consumers with all required information to serve the texts via a CTS API, from edition information to textual node, including citation scheme information. CapiTainS splits this information so that the Citation Scheme is an inherent part of the text, using traditional TEI capacities, while all other metadata can be found in separate files. The reasoning behind this split was to allow for separate maintenance of general metadata - used to browse a catalog of texts - and text metadata such as the citation scheme. Finally, the directory structure of CapiTainS allows a much simpler browsing method for finding, adding, updating resources in a repository:  by separating resources by URN levels, it brings ease of maintenance. 
 
 ## Participants 
 
@@ -29,10 +29,10 @@ Thibault Clérice and Bridget Almas are the original developers of these guideli
 
 ## CTS URN Choice
 
-URN choice is quite often one of the first questions people ask when trying to decided wether or not CTS is good for them, and it often feels to us that it prevents people from actually adopting the standard. Here is a list of languages with recommendations for your language choice. If you want to provide 
+URN choice is quite often one of the first questions people ask when trying to decided wether or not CTS is good for them, and it often feels to us that it prevents people from actually adopting the standard. Here is a list of languages with recommendations for your language choice.  
 
 
-| ISO 639-2   | Language         | Type of text         | Recommandation                                                                                                                                                                                                                                                                                                                   |  
+| ISO 639-2   | Language         | Type of text         | Recommendation                                                                                                                                                                                                                                                                                                                   |  
 | ----------- | ----------       | --------------       | ----------------                                                                                                                                                                                                                                                                                                                 |  
 | ara         | Classical Arabic | Literature           | Use the CTS Namespace "arabicLit". Refer to the [Perseus' Catalog](http://catalog.perseus.org) to find the work urn. Questions can be addressed to catalog "at" perseus.tufts.edu.                                                                                                                                                                                   |  
 | fro         | Medieval French  | Literature           | Use the CTS namespace "froLit". Use the Jonas database permalinks number to chose your textgroup and work identifiers : http://jonas.irht.cnrs.fr/ , *eg* the [Vie de Saint Martin](http://jonas.irht.cnrs.fr/oeuvre/1856) of [Wauchier de Denain](http://jonas.irht.cnrs.fr/intervenant/915) should be `urn:cts:jns915.jns1856` |  
@@ -44,19 +44,19 @@ URN choice is quite often one of the first questions people ask when trying to d
 | lat         | Latin            | Papyrii              | Need documentation.                                                                                                                                                                                                                                                                                                              |  
 
 
-Finally, for the last part of the urn (the edition or translation identifier), we recommend to use the name of your project or lab, followed by a dash, an iso 639-2 code and a number that you could increment should you provide other editions, *eg* ciham-fro1, perseus-eng1, opp-lat1, etc.
+Finally, for the last part of the urn (the edition or translation identifier), we recommend using the name of your project or lab, followed by a dash, an iso 639-2 code and a number that you could increment should you provide other editions, *eg* ciham-fro1, perseus-eng1, opp-lat1, etc.
 
 In general, a CTS URN should be lowercase only and be as short as possible. If it uses external identifier, the identifier provider (tlg, stoa, jns) should be part of the scheme. Feel free to contact us by github or [by mail](mailto:capitains[at]googlegroups.com) if you need help or want to propose a provider. 
 
 ## Directory structure
 
-1. A texts repository should be built with a main data folder.
-2. The data folder should contain directories which are named after textgroup urn's component. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would have a directory phi1294.*
+1. A text repository should be built with a main data folder.
+2. The data folder should contain directories which are named after textgroup's urn component. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would have a directory phi1294.*
 3. The textgroup directory contains a `__cts__.xml` file ([see below](#Texgroup_Metadata_Files)) containing metadata about the textgroup
-4. The textgroup directory contains directories which are named after work urn's component. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would have a directory phi002.*
-5. The work directory contains editions' and translations' files.
+4. The textgroup directory contains directories which are named after work's urn component. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would have a directory phi002.*
+5. The work directory contains the edition and translation files.
 6. The work directory contains a `__cts__.xml` file ([see below](#Work_Metadata_Files)) containing metadata about the work, editions and translations.
-7. Edition' and translation' files are named after their urn using every component except the namespace. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would be phi1294.phi002.perseus-lat2.*
+7. Edition and translation files are named after their urn using every component except the namespace. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would be phi1294.phi002.perseus-lat2.*
 
 {% highlight xml %}
 data/
@@ -89,7 +89,7 @@ data/
 
 ## Metadata Files
 
-Instead of relying on edition and translation TEI files or building a general inventories, splitting resources into individual file allows for balanced responsability between a cataloging approach and a text reading one. CapiTainS guidelines are non-restrictives : as you as the minimal information is available, you can add nodes coming from other namespaces.
+Instead of relying on edition and translation TEI files or building a general inventories, splitting resources into individual files allows for balanced responsibility between a cataloging approach and a text reading one. CapiTainS guidelines are non-restrictive : as long as the minimal information is available, you can add nodes coming from other namespaces.
 
 ### Textgroup Metadata File
 
@@ -112,7 +112,7 @@ Instead of relying on edition and translation TEI files or building a general in
 
 {% highlight xml %}
 <!--
-  The work nodes has three attributes :
+  The work node has three attributes :
     - The first one, groupUrn, contains only the urn up to the textgroup component
     - The second, urn, contains only the urn up to the work component
     - The third, xml:lang, reflects the language of the work, *ie* the language of the edition.
@@ -124,7 +124,7 @@ Instead of relying on edition and translation TEI files or building a general in
 >
     <!--
       Work must have at least one title node.
-      Title node need xml:lang declaration, it reflects the language of the title.
+      Title node needs xml:lang declaration, it reflects the language of the title.
     -->
     <ti:title xml:lang="eng">Epigrammata</ti:title>
     <!-- 
@@ -139,14 +139,14 @@ Instead of relying on edition and translation TEI files or building a general in
       urn="urn:cts:latinLit:phi1294.phi002.perseus-lat2"
     >
         <!--
-          Edition and Translation must have at least one title node.
-          Title represents the title of the edition.
-          Title node need xml:lang declaration, it reflects the language of the title.
+          Edition and Translation must have at least one label node.
+          Label represents the title of the edition.
+          Label node needs xml:lang declaration, it reflects the language of the title.
         -->
         <ti:label xml:lang="eng">Martial's Epigrammata</ti:label>
         <!--
           Edition and Translation must have at least one description node.
-          Description node need xml:lang declaration, it reflects the language of the description.
+          Description node needs xml:lang declaration, it reflects the language of the description.
           
         -->
         <ti:description xml:lang="eng">
@@ -154,11 +154,12 @@ Instead of relying on edition and translation TEI files or building a general in
         </ti:description>
     </ti:edition>
     <!--
-      The edition nodes has two attributes :
+      The translation node has three attributes :
         - The first one, workUrn, contains only the urn up to the work component
         - The second, urn, contains the full urn
+        - The third, xml:lang, contains the language of the translation
     -->
-    <ti:translation workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-eng2">
+    <ti:translation workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-eng2" xml:lang="eng">
         <ti:label xml:lang="eng">Epigrammata</ti:label>
         <ti:description xml:lang="eng">Nice translations informations</ti:description>
     </ti:translation>
@@ -167,29 +168,29 @@ Instead of relying on edition and translation TEI files or building a general in
 
 ## TEI XML
 
-### URN Informations
+### URN Information
 
-There is two different recommendations :
+There are two different recommendations :
 
-1. If the text is epidoc, the convention is to set it in the following xpath : `TEI/text/body/div[@type="edition" or @type="translation"]/@n` 
-2. If the text is normal TEI, the convention is to set it in the following xpath : `TEI/text/body/@n`
+1. If the text is epidoc, the convention is to supply the URN in the following xpath : `TEI/text/body/div[@type="edition" or @type="translation"]/@n` 
+2. If the text is normal TEI, the convention is to supply the URN the following xpath : `TEI/text/body/@n`
 
 The same node should have an `xml:lang` attribute stating the language of the text.
 
-### Citation informations
+### Citation information
 
-The citation scheme is reflected in a refsDecl node, in the teiHeader's encodingDesc of the edition or the translation. In this refsDecl, we use [cRefPattern](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cRefPattern.html) nodes to define citations levels and their xpath. It holds explicitly the passage informations. For cross-language compatibility, it is recommended to use only XPath 1, which is the latest one implemented in the lxml library used by C, PhP and Python.
+The citation scheme is reflected in a refsDecl node, in the teiHeader's encodingDesc of the edition or the translation. In this refsDecl, we use [cRefPattern](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-cRefPattern.html) nodes to define citations levels and their xpaths. It explicitly holds the passage informations. For cross-language compatibility, it is recommended to use only XPath 1, which is the latest one implemented in the lxml library used by C, PhP and Python.
 
 - refsDecl should be in /TEI/teiHeader/encodingDesc.
 - refsDecl should have its @n property set on "CTS"
-- refsDecl contains as many cRefPattern as there is levels
-- cRefPattern are ordered from deeper node to highest node
-- the matchPattern should give an information about the number of level. Traditionnally, we use (\w+) regexp to match identifiers
+- refsDecl contains as many cRefPattern as there are levels
+- cRefPattern elements are ordered from deeper node to highest node
+- the matchPattern should give an information about the number of level. Traditionally, we use (\w+) regexp to match identifiers
 - the replacementPattern should contain $[1-9] which represents depth of a level, ie. this book passage 1.pr.8 should match the following xpath : /tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='1']/tei:div[@n='pr']/tei:div[@n='9']
 - There is no tag restriction in this xpath. You can use tei:w, tei:seg, tei:p, etc.
 - the @n attributes represents the name of the level, usually book, poem, line, section, chapter, paragraph, argument, etc. 
 - the @n attribute should always be lowercase.
-- cRefPattern can include paragraphs which translates matchPattern and level hierarchy into human readable information
+- cRefPattern can include paragraphs which translate matchPattern and level hierarchy into human readable information
 
 {% highlight xml %}
 <refsDecl n="CTS">
