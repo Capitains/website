@@ -4,7 +4,7 @@ permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
-bootswatch-theme: cosmo
+bootswatch-theme: flatly
 
 markdown: kramdown
 
