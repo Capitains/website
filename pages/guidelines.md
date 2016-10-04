@@ -171,10 +171,12 @@ Instead of relying on edition and translation TEI files or building a general in
 
 ### URN Information
 
-There are two different recommendations :
+There are three recommendations :
 
 1. If the text is epidoc, the convention is to supply the URN in the following xpath : `TEI/text/body/div[@type="edition" or @type="translation"]/@n` 
 2. If the text is normal TEI, the convention is to supply the URN the following xpath : `TEI/text/body/@n`
+3. For normal TEI, it is also possible to supply the URN as the value of an [@xml:base](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.html) attribute in the following xpath: 
+`TEI/text/@xml:base`
 
 The same node should have an `xml:lang` attribute stating the language of the text.
 
