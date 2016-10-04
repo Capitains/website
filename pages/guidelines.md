@@ -175,9 +175,9 @@ There are three recommendations :
 
 1. If the text is epidoc, the convention is to supply the URN in the following xpath : `TEI/text/body/div[@type="edition" or @type="translation"]/@n` 
 2. If the text is normal TEI, the convention is to supply the URN the following xpath : `TEI/text/body/@n`
-3. For normal TEI, it is also possible to supply the URN as the value of an `@xml:base` attribute; most often, the attribute will be found at `text`, but it can be appended to other elements as well; in any case, elements which have `@xml:base` will be considered editions of an individual work:
-`TEI/text/@xml:base` (in a collection of poems, for example)
-`TEI/text[@xml:base]/div[2]/div/@xml:base` (an individual poem from the second part of the collection)
+3. For normal TEI, it is also possible to supply the URN as the value of an `@xml:base` attribute (most often, the attribute will be found at `text`, but it can be appended to other elements as well); elements which have `@xml:base` will be considered editions of individual works:
+`TEI/text/@xml:base` (contains the URN for a collection of poems, for example), 
+`TEI/text[@xml:base]/div[2]/div/@xml:base` (contains the URN for an individual poem from the second part of the collection)
 
 The same node should have an `xml:lang` attribute stating the language of the text.
 
