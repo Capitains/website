@@ -130,7 +130,7 @@ Instead of relying on edition and translation TEI files or building a general in
     -->
     <ti:title xml:lang="eng">Epigrammata</ti:title>
     <!-- 
-      For each "text", either edition or translation, there should be a ti:edition or ti:translation node
+      For each "text", either edition, translation, or commentary, there should be a ti:edition, ti:translation, or ti:commentary node
 
       The edition nodes has two attributes :
         - The first one, workUrn, contains only the urn up to the work component
@@ -172,8 +172,14 @@ Instead of relying on edition and translation TEI files or building a general in
         - The third, xml:lang, contains the language of the commentary
     -->
     <ti:commentary workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-eng3" xml:lang="eng">
-        <ti:label xml:lang="mul">Introduction to Epigrammata</ti:label>
+        <ti:label xml:lang="mul">Introduction to the English translation of Epigrammata</ti:label>
         <ti:description xml:lang="eng">Nice commentary informations</ti:description>
+        <!--
+          The commentary has one extra node not found in edition or translation: the ti:about node. 
+          This node has one attribute :
+          - urn, which contains the URN of the textgroup, work, edition, translation, or commentary that this commentary is about
+        -->
+        <ti:about urn="urn:cts:latinLit:phi1294.phi002.perseus-eng2"/>
     </ti:commentary>
 </ti:work>
 
