@@ -45,7 +45,7 @@ URN choice is quite often one of the first questions people ask when trying to d
 | lat         | Latin            | Papyrii              | Need documentation.                                                                                                                                                                                                                                                                                                              |  
 
 
-Finally, for the last part of the urn (the edition or translation identifier), we recommend using the name of your project or lab, followed by a dash, an iso 639-2 code and a number that you could increment should you provide other editions, *eg* ciham-fro1, perseus-eng1, opp-lat1, etc.
+Finally, for the last part of the urn (the edition, translation, or commentary identifier), we recommend using the name of your project or lab, followed by a dash, an iso 639-2 code and a number that you could increment should you provide other editions, *eg* ciham-fro1, perseus-eng1, opp-lat1, etc.
 
 In general, a CTS URN should be lowercase only and be as short as possible. If it uses external identifier, the identifier provider (tlg, stoa, jns) should be part of the scheme. Feel free to contact us by github or [by mail](mailto:capitains[at]googlegroups.com) if you need help or want to propose a provider. 
 
@@ -55,9 +55,9 @@ In general, a CTS URN should be lowercase only and be as short as possible. If i
 2. The data folder should contain directories which are named after textgroup's urn component. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would have a directory phi1294.*
 3. The textgroup directory contains a `__cts__.xml` file ([see below](#Texgroup_Metadata_Files)) containing metadata about the textgroup
 4. The textgroup directory contains directories which are named after work's urn component. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would have a directory phi002.*
-5. The work directory contains the edition and translation files.
+5. The work directory contains the edition, translation, and commentary files.
 6. The work directory contains a `__cts__.xml` file ([see below](#Work_Metadata_Files)) containing metadata about the work, editions and translations.
-7. Edition and translation files are named after their urn using every component except the namespace. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would be phi1294.phi002.perseus-lat2.*
+7. Edition, translation, and commentary files are named after their urn using every component except the namespace. *For example, urn:cts:latinLit:phi1294.phi002.perseus-lat2 would be phi1294.phi002.perseus-lat2.*
 
 ```
 data/
@@ -86,11 +86,22 @@ data/
       |- __cts__.xml
       |- tlg0012.tlg001.perseus-grc1.xml
       |- tlg0012.tlg001.perseus-eng2.xml
+      |- tlg0012.tlg001.perseus-eng3.xml
 ```
 
 ## Metadata Files
 
 Instead of relying on edition and translation TEI files or building a general inventories, splitting resources into individual files allows for balanced responsibility between a cataloging approach and a text reading one. CapiTainS guidelines are non-restrictive : as long as the minimal information is available, you can add nodes coming from other namespaces.
+
+### Nodes specific to CapiTainS
+
+#### Commentary
+
+The ti:commentary node is meant to provide information about "texts" that are not considered editions or translations but, instead, are modern texts that comment on other texts. This could include the front or back matter of an edition or translation, e.g., the introduction, glossary, appendix, etc. It could also include modern volumes that were written specifically as commentaries on a text, e.g., a commentary on the Aeneid or the Gospel of Matthew. These "texts" contain important information about authors, works, editions, translations, or even other commentaries that we wanted to be able to relate to those textual objects.
+
+#### About
+
+At the present time, the ti:about node exists only as a child of the ti:commentary node. It should be an empty node with a single attribute, the `urn` of the textgroup, work, edition, translation, or commentary upon which it comments.
 
 ### Textgroup Metadata File
 
@@ -129,7 +140,7 @@ Instead of relying on edition and translation TEI files or building a general in
     -->
     <ti:title xml:lang="eng">Epigrammata</ti:title>
     <!-- 
-      For each "text", either edition or translation, there should be a ti:edition or ti:translation node
+      For each "text", either edition, translation, or commentary, there should be a ti:edition, ti:translation, or ti:commentary node
 
       The edition nodes has two attributes :
         - The first one, workUrn, contains only the urn up to the work component
@@ -140,17 +151,17 @@ Instead of relying on edition and translation TEI files or building a general in
       urn="urn:cts:latinLit:phi1294.phi002.perseus-lat2"
     >
         <!--
-          Edition and Translation must have at least one label node.
+          Edition, Translation, and Commentary must have at least one label node.
           Label represents the title of the edition.
           Label node needs xml:lang declaration, it reflects the language of the title.
         -->
-        <ti:label xml:lang="eng">Martial's Epigrammata</ti:label>
+        <ti:label xml:lang="mul">Martial's Epigrammata</ti:label>
         <!--
-          Edition and Translation must have at least one description node.
+          Edition, Translation, and Commentary must have at least one description node.
           Description node needs xml:lang declaration, it reflects the language of the description.
           
         -->
-        <ti:description xml:lang="eng">
+        <ti:description xml:lang="lat">
             M. Valerii Martialis Epigrammaton libri / recognovit W. Heraeus
         </ti:description>
     </ti:edition>
@@ -161,10 +172,27 @@ Instead of relying on edition and translation TEI files or building a general in
         - The third, xml:lang, contains the language of the translation
     -->
     <ti:translation workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-eng2" xml:lang="eng">
-        <ti:label xml:lang="eng">Epigrammata</ti:label>
+        <ti:label xml:lang="lat">Epigrammata</ti:label>
         <ti:description xml:lang="eng">Nice translations informations</ti:description>
     </ti:translation>
+    <!--
+      The commentary node has three attributes :
+        - The first one, workUrn, contains only the urn up to the work component
+        - The second, urn, contains the full urn
+        - The third, xml:lang, contains the language of the commentary
+    -->
+    <ti:commentary workUrn="urn:cts:latinLit:phi1294.phi002" urn="urn:cts:latinLit:phi1294.phi002.perseus-eng3" xml:lang="eng">
+        <ti:label xml:lang="mul">Introduction to the English translation of Epigrammata</ti:label>
+        <ti:description xml:lang="eng">Nice commentary informations</ti:description>
+        <!--
+          The commentary has one extra node not found in edition or translation: the ti:about node. 
+          This node has one attribute :
+          - urn, which contains the URN of the textgroup, work, edition, translation, or commentary that this commentary is about
+        -->
+        <ti:about urn="urn:cts:latinLit:phi1294.phi002.perseus-eng2"/>
+    </ti:commentary>
 </ti:work>
+
 ```
 
 ## TEI XML
@@ -173,7 +201,7 @@ Instead of relying on edition and translation TEI files or building a general in
 
 There are three recommendations :
 
-1. If the text is epidoc, the convention is to supply the URN in the following xpath : `TEI/text/body/div[@type="edition" or @type="translation"]/@n` 
+1. If the text is epidoc, the convention is to supply the URN in the following xpath : `TEI/text/body/div[@type="edition" or @type="translation" or @type="commentary"]/@n` 
 2. If the text is normal TEI, the convention is to supply the URN the following xpath : `TEI/text/body/@n`
 3. For normal TEI, it is also possible to supply the URN as the value of an [@xml:base](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.global.html) attribute in the following xpath: 
 `TEI/text/@xml:base`
