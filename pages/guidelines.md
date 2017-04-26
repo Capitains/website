@@ -97,7 +97,7 @@ Instead of relying on edition and translation TEI files or building a general in
 
 #### Commentary
 
-The ti:commentary node is meant provide information about "texts" that are not considered editions or translations but, instead, are modern texts that comment on other texts. This could include the front or back matter of an edition or translation, e.g., the introduction, glossary, appendix, etc. It could also include modern volumes that were written specifically as commentaries on a text, e.g., a commentary on the Aeneid or the Gospel of Matthew. These "texts" contain important information about authors, works, editions, or translations that we wanted to be able to relate to those textual objects.
+The ti:commentary node is meant to provide information about "texts" that are not considered editions or translations but, instead, are modern texts that comment on other texts. This could include the front or back matter of an edition or translation, e.g., the introduction, glossary, appendix, etc. It could also include modern volumes that were written specifically as commentaries on a text, e.g., a commentary on the Aeneid or the Gospel of Matthew. These "texts" contain important information about authors, works, editions, translations, or even other commentaries that we wanted to be able to relate to those textual objects.
 
 #### About
 
