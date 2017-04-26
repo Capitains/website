@@ -93,6 +93,16 @@ data/
 
 Instead of relying on edition and translation TEI files or building a general inventories, splitting resources into individual files allows for balanced responsibility between a cataloging approach and a text reading one. CapiTainS guidelines are non-restrictive : as long as the minimal information is available, you can add nodes coming from other namespaces.
 
+### Nodes specific to CapiTainS
+
+#### Commentary
+
+The ti:commentary node is meant provide information about "texts" that are not considered editions or translations but, instead, are modern texts that comment on other texts. This could include the front or back matter of an edition or translation, e.g., the introduction, glossary, appendix, etc. It could also include modern volumes that were written specifically as commentaries on a text, e.g., a commentary on the Aeneid or the Gospel of Matthew. These "texts" contain important information about authors, works, editions, or translations that we wanted to be able to relate to those textual objects.
+
+#### About
+
+At the present time, the ti:about node exists only as a child of the ti:commentary node. It should be an empty node with a single attribute, the `urn` of the textgroup, work, edition, translation, or commentary upon which it comments.
+
 ### Textgroup Metadata File
 
 ```xml
