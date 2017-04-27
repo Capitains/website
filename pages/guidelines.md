@@ -199,7 +199,7 @@ At the present time, the ti:about node exists only as a child of the ti:commenta
 
 CapiTainS also makes it possible to add more structured metadata for every type of object. This structured metadata can be used to specify information about a text's author, e.g., `<scm:birthDate>`, a work, `<dc:creator>`, or an edition, translation, or commentary, e.g., `<dc:publisher>`. 
 
-Since the `structured-metadata` node comes from the CapiTainS namespace, the XML namespace declaration `xmlns:cpt="http://capitains.org/ns/1.0#"` should appear as an attribute on the root tag of the XML tree of the metadata file. Then the namespace for every type of metadata you plan to use should also be added as an attribute to the root tag, e.g, `xmlns:dc="http://purl.org/dc/elements/1.1/"`. Then, a `<cpt:structured-metadata>` node should be added as a child of the node belonging to the object that the structured metadata describes, i.e., the textgroup, work, edition, translation, or commentary.
+Since the `structured-metadata` node comes from the CapiTainS namespace, the XML namespace declaration `xmlns:cpt="http://purl.org/capitains/ns/1.0#"` should appear as an attribute on the root tag of the XML tree of the metadata file. Then the namespace for every type of metadata you plan to use should also be added as an attribute to the root tag, e.g, `xmlns:dc="http://purl.org/dc/elements/1.1/"`. Then, a `<cpt:structured-metadata>` node should be added as a child of the node belonging to the object that the structured metadata describes, i.e., the textgroup, work, edition, translation, or commentary.
 
 Child nodes of `structured-metadata` can have two attributes : `xml:lang` and `rdf:type`. For the moement, only XSD:types are accepted as values for `rdf:type`. 
 
@@ -207,7 +207,7 @@ One should think of the child nodes of the `structured-metadata` node in terms o
 
 ```
 <ti:textgroup urn="urn:cts:greekLit:stoa0033a"
-        xmlns:cpt="http://capitains.org/ns/1.0#"
+        xmlns:cpt="http://purl.org/capitains/ns/1.0#"
         xmlns:saws="http://purl.org/saws/ontology#"
         xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:dct="http://purl.org/dc/terms/"
