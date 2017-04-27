@@ -195,6 +195,53 @@ At the present time, the ti:about node exists only as a child of the ti:commenta
 
 ```
 
+### Structured Metadata
+
+CapiTainS also makes it possible to add more structured metadata for every type of object. This structured metadata can be used to specify information about a text's author, e.g., `<scm:birthDate>`, a work, `<dc:creator>`, or an edition, translation, or commentary, e.g., `<dc:publisher>`. 
+
+Since the `structured-metadata` node comes from the CapiTainS namespace, the XML namespace declaration `xmlns:cpt="http://purl.org/capitains/ns/1.0#"` should appear as an attribute on the root tag of the XML tree of the metadata file. Then the namespace for every type of metadata you plan to use should also be added as an attribute to the root tag, e.g, `xmlns:dc="http://purl.org/dc/elements/1.1/"`. Then, a `<cpt:structured-metadata>` node should be added as a child of the node belonging to the object that the structured metadata describes, i.e., the textgroup, work, edition, translation, or commentary.
+
+Child nodes of `structured-metadata` can have two attributes : `xml:lang` and `rdf:type`. For the moement, only XSD:types are accepted as values for `rdf:type`. 
+
+One should think of the child nodes of the `structured-metadata` node in terms of RDF triples. If the CTS node containing the `structured-metadata` is a subject, in this case `translation`, each node represents part of a triple where translation is the subject, the tag is the predicate and the value of the tag is an object. So, for instance, one such triple in the example below would be `translation creator Pseudo-Aristotle`, which would resolve to `translation hasCreator Pseudo-Aristotle`.
+
+```
+<ti:textgroup urn="urn:cts:greekLit:stoa0033a"
+        xmlns:cpt="http://purl.org/capitains/ns/1.0#"
+        xmlns:saws="http://purl.org/saws/ontology#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:dct="http://purl.org/dc/terms/"
+        xmlns:ti="http://chs.harvard.edu/xmlns/cts"
+        xmlns:scm="http://schema.org/">
+    <ti:groupname>Pseudo-Aristotle</ti:groupname>
+    <ti:work groupUrn="urn:cts:greekLit:stoa0033a" xml:lang="eng" urn="urn:cts:greekLit:stoa0033a.tlg028">
+        <ti:title xml:lang="eng">De Mundo</ti:title>
+        <ti:translation xml:lang="grc" urn="urn:cts:greekLit:stoa0033a.tlg028.1st1K-grc1" workUrn="urn:cts:greekLit:stoa0033a.tlg028">
+            <ti:label xml:lang="eng">De Mundo</ti:label>
+            <ti:description xml:lang="mul">Pseudo-Aristotle, De Mundo, Immanuel Bekker, Oxford University Press, 1837</ti:description>
+            <cpt:structured-metadata>
+                <dc:creator xml:lang="eng">Pseudo-Aristotle</dc:creator>
+                <dc:title xml:lang="eng">De Mundo</dc:title>
+                <dc:contributor xml:lang="eng">Immanuel Bekker</dc:contributor>
+                <dc:publisher xml:lang="eng">Oxford University Press</dc:publisher>
+                <dct:dateCopyrighted rdf:datatype="xsd:gYear">1837</dct:dateCopyrighted>
+            </cpt:structured-metadata>
+        </ti:translation>
+        <cpt:structured-metadata>
+            <dc:creator xml:lang="eng">Pseudo-Aristotle</dc:creator>
+            <saws:isAttributedToAuthor xml:lang="eng">Aristote</saws:isAttributedToAuthor>
+            <saws:cost>1.5</saws:cost>
+        </cpt:structured-metadata>
+    </ti:work>
+    <cpt:structured-metadata>
+        <scm:birthDate>-0384</scm:birthDate>
+        <scm:birthDate>457BCE</scm:birthDate>
+        <scm:birthPlace xml:lang="fre">Stagire</scm:birthPlace>
+        <scm:birthPlace>https://pleiades.stoa.org/places/501625</scm:birthPlace>
+    </cpt:structured-metadata>
+</ti:textgroup>
+```
+
 ## TEI XML
 
 ### URN Information
