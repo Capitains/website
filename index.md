@@ -1,13 +1,13 @@
 ---
 layout: page
 title: CapiTainS
-tagline: Tool suite and guidelines for CTS
+tagline: Software suite and guidelines for Citable Text
 logo: /assets/images/logo.png
 ---
 
-[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.32701.svg)](http://dx.doi.org/10.5281/zenodo.32701)
+[![DOI](https://zenodo.org/badge/37591459.svg)](https://zenodo.org/badge/latestdoi/37591459)
 
-CapiTainS is an informal open-source organization which aims at providing a suite of tools and guidelines for the CTS standards. Developers, guidelines contributor and more generally users are all welcome to join. You can contact us on github but more generally on [googlegroups](https://groups.google.com/forum/#!forum/capitains). You can find a few tutorials on our [youtube channel](https://www.youtube.com/channel/UCvwGuaIuATNfnM_TwhPMn7w). You can also contact individually the main maintainers of this repository on twitter : [Thibault Clérice](https://twitter.com/PonteIneptique) and [Bridget Almas](https://twitter.com/BridgetAlmas)
+CapiTainS is an informal open-source organization which aims at providing a suite of tools and guidelines for Citable Text APIs standards. Developers, guidelines contributor and more generally users are all welcome to join. You can contact us on github but more generally on [googlegroups](https://groups.google.com/forum/#!forum/capitains). You can find a few tutorials on our [youtube channel](https://www.youtube.com/channel/UCvwGuaIuATNfnM_TwhPMn7w). You can also contact individually the main maintainers of this repository on twitter : [Thibault Clérice](https://twitter.com/PonteIneptique) and [Bridget Almas](https://twitter.com/BridgetAlmas)
 
 ## Why you should browse and use our tools (and stay on this website longer)
 

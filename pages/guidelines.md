@@ -205,7 +205,7 @@ Child nodes of `structured-metadata` can have two attributes : `xml:lang` and `r
 
 One should think of the child nodes of the `structured-metadata` node in terms of RDF triples. If the CTS node containing the `structured-metadata` is a subject, in this case `translation`, each node represents part of a triple where translation is the subject, the tag is the predicate and the value of the tag is an object. So, for instance, one such triple in the example below would be `translation creator Pseudo-Aristotle`, which would resolve to `translation hasCreator Pseudo-Aristotle`.
 
-```
+```xml
 <ti:textgroup urn="urn:cts:greekLit:stoa0033a"
         xmlns:cpt="http://purl.org/capitains/ns/1.0#"
         xmlns:saws="http://purl.org/saws/ontology#"
