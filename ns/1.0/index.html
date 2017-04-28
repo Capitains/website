@@ -33,10 +33,6 @@ table.border td, table.border th { border-right: 1px solid #CCC; border-bottom: 
 <tr>
 <th>Date Issued:</th>
 <td>2017-04-27</td></tr>
-<tr>
-<th>Status of document:</th>
-<td>????</td></tr>
-<tr>
 <th>Description of document:</th>
 <td>This document is a quick reference for the CapiTainS Metadata Element Set, Version 1.0.
 </td></tr>
@@ -44,43 +40,20 @@ table.border td, table.border th { border-right: 1px solid #CCC; border-bottom: 
 <a name="introduction" id="introduction"></a> 
 <h2>Introduction</h2>
 
-<p>The following elements have been added by CapiTainS to the normal CTS element set. Theses elements should only be used in the context of the CapiTainS guidelines <a href="http://capitains.org/pages/guidelines">http://capitains.org/pages/guidelines</a>.</p>
+<p>The following elements have been created by CapiTainS to encode metadata of texts in the context of Citable Text Services supported by CapiTainS guidelines. These elements should only be used in the context of the CapiTainS guidelines <a href="http://capitains.org/pages/guidelines">http://capitains.org/pages/guidelines</a>.</p>
 
+<!--
 <h4>References</h4>
 <table width="95%" border="0" align="center">
 
 <tr><td width="20%">
-<a name="RFC"></a>[RFC5013]
+<a name="CPT"></a>[CPT]
 </td><td width="80%">
 <a href="http://www.ietf.org/rfc/rfc5013.txt">http://www.ietf.org/rfc/rfc5013.txt</a>
 </td></tr>
 
-<tr><td width="20%">
-<a name="NISOZ3985"></a>[NISOZ3985]
-</td><td width="80%">
-<a href="http://www.niso.org/apps/group_public/download.php/10256/Z39-85-2012_dublin_core.pdf">http://www.niso.org/apps/group_public/download.php/10256/Z39-85-2012_dublin_core.pdf</a>
-</td></tr>
-
-<tr><td width="20%">
-<a name="ISO15836"></a>[ISO15836]
-</td><td width="80%">
-<a href="http://www.iso.org/iso/search.htm?qt=15836&amp;searchSubmit=Search&amp;sort=rel&amp;type=simple&amp;published=on">http://www.iso.org/iso/search.htm?qt=15836&amp;searchSubmit=Search&amp;sort=rel&amp;type=simple&amp;published=on</a>
-</td></tr>
-
-<tr><td width="20%">
-<a name="TRANSLATIONS"></a>[TRANSLATIONS]
-</td><td width="80%">
-<a href="/resources/translations/">http://dublincore.org/resources/translations/</a>
-</td></tr>
-
-<tr><td width="20%">
-<a name="DCTERMS"></a>[DCTERMS]
-</td><td width="80%">
-<a href="/documents/dcmi-terms/">http://dublincore.org/documents/dcmi-terms/</a>
-</td></tr>
-
 </table>
-
+-->
 
 <a name="the_elements" id="the_elements"></a> 
 <h2>The Elements</h2>
@@ -93,7 +66,7 @@ table.border td, table.border th { border-right: 1px solid #CCC; border-bottom: 
 <td>URI:
 					</td>
 <td>
-<a href="http://purl.org/capitains/ns/1.0#/structured-metadata">http://purl.org/capitains/ns/1.0#/structured-metadata</a>
+<a href="http://purl.org/capitains/ns/1.0#structured-metadata">http://purl.org/capitains/ns/1.0#structured-metadata</a>
 </td>
 </tr>
 <tr>
@@ -111,7 +84,7 @@ table.border td, table.border th { border-right: 1px solid #CCC; border-bottom: 
 					</td>
 <td>Structured Metadata can be used to specify information about a text's author, e.g., <code>&lt;scm:birthDate&gt;</code>, a work, <code>&lt;dc:creator&gt;</code>, or an edition, translation, or commentary, e.g., <code>&lt;dc:publisher&gt;</code>.<br/>
 Child nodes of structured-metadata can have two attributes : <code>xml:lang</code> and <code>rdf:type</code>. For the moment, only XSD:types are accepted as values for <code>rdf:type</code>.<br/>
-One should think of the child nodes of the structured-metadata node in terms of RDF triples. If the CTS node containing the <code>structured-metadata</code> is a subject, in this case translation, each node represents part of a triple where translation is the subject, the tag is the predicate and the value of the tag is an object. So, for instance, one such triple in the example below would be <code>translation creator Pseudo-Aristotle</code>, which would resolve to <code>translation hasCreator Pseudo-Aristotle</code>.
+One should think of the child nodes of the structured-metadata node in terms of RDF triples. If the a CTS <code>Translation</code> XML node containing the <code>structured-metadata</code> is a subject, in this case translation, each node represents part of a triple where translation is the subject, the tag is the predicate and the value of the tag is an object. So, for instance, one such triple in the example below would be <code>translation creator Pseudo-Aristotle</code>, which would resolve to <code>translation hasCreator Pseudo-Aristotle</code>.
 </td>
 </tr>
 </table>
