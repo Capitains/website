@@ -16,23 +16,7 @@ description: ""
 
 CapiTainS tool suite is large and the naming can be sometime painful to remember. Here is a reminder and description of every tool we develop.
 
-## Language Libraries
-
-### Sparrow (JavaScript)
-
-[![CapiTainS Sparrow](/assets/images/Sparrow.png)](https://github.com/capitains/Sparrow)
-
-CapiTainS Sparrow is a library, an abstraction for CTS. It provides simple and easy-to-use commands to query CTS APIs as well as parsing results resources.
-
-**Relates resources** :
-
-- [Documentation](https://github.com/Capitains/docker-hooktest)
-- [jQuery Typeahead](https://github.com/Capitains/jQuery.typeahead) retrieve resources and passages using a simple fulltext search tool on CTS inventories.
-- [Journey Of The Hero](http://www.perseids.org/sites/joth/) was developed using full frontend technologies and Sparrow for CTS API communication and parsing
-- [jQuery Selector plugin](https://github.com/Capitains/jQuery.selector) : list resources and retrieve them using form boxes *(Development on hold)*
-- [jQuery Service Plugin](https://github.com/Capitains/jQuery.service) implements a simple way to call API Services using CTS data *(Development on hold)*
-- [jQuery XSLT Plugin](https://github.com/Capitains/jQuery.xslt) implements a simple way to use XSLT (with parameters) using CTS Data *(Development on hold)*
-- [Nemo for AngularJS](https://github.com/angular-nemo) was a quick demo tool to show the potential uses of Sparrow *(Development on hold)*
+## Python software library
 
 ### MyCapytain (Python)
 
@@ -45,14 +29,7 @@ MyCapytain is a library, an abstraction for CTS. It provides simple and easy to 
 - [Documentation](https://mycapytain.readthedocs.io)
 - [Nemo for Flask](#nemo-for-flask-python)
 - [Nautilus for Flask](#nautilus-for-flask-python)
-- [Nautilus for Flask](#nautilus-for-flask-python)
 - [Hook](#testing-resources-hook)
-
-### Cavern (Ruby)
-
-![CapiTainS Cavern](/assets/images/Cavern.png)
-
-*In development by Perseids' developer Bridget Almas*
 
 ## Frameworks and Softwares
 
@@ -65,7 +42,6 @@ Nemo is a web frontend providing a user interface on top of a CTS API. It's high
 **Relates resources** :
 
 - [Documentation](https://flask-capitains-nemo.readthedocs.io)
-- [Docker Image with Nautilus](https://github.com/Capitains/docker-capitains-nemo-nautilus) ([Tutorials](/pages/tutorials.html))
 
 ### Nautilus for Flask (Python)
 
@@ -76,25 +52,7 @@ Nautilus provides a backend CTS API implementation relying on local files. It pr
 **Relates resources** :
 
 - [Documentation](https://capitains-nautilus.readthedocs.io)
-- [Docker Image with Nemo](https://github.com/Capitains/docker-capitains-nemo-nautilus) ([Tutorials](/pages/tutorials.html))
-
-### CTS API for eXistDB (xQuery)
-
-[![CapiTainS CTS API for eXistDB](/assets/images/CTS_API.png)](https://github.com/capitains/CTS5-XQ)
-
-eXistDB Package which provide a CTS API *(Development on hold)*
-
-### Inventory Maker for eXistDB (xQuery)
-
-[![CapiTainS Inventory Maker for eXistDB](/assets/images/Inventory_Maker.png)](https://github.com/capitains/inventory-maker)
-
-eXistDB Package which provide an admin interface for building inventories *(Development on hold)*
-
-### Ahab for eXistDB (xQuery)
-
-[![CapiTainS Ahab](/assets/images/Ahab.png)](https://github.com/capitains/Ahab-eXistDB)
-
-eXistDB Package which provide an Ahab API *(Development on hold)*
+- [Docker Image with Nemo](https://github.com/Capitains/docker-capitains-nemo-nautilus) ([Tutorials](https://github.com/Capitains/tutorial-nemo/blob/master/README.md))
 
 ## Testing resources : Hook
 
@@ -137,3 +95,20 @@ HookTest is the testing software component which provides results. It can be use
 Other resources such as guidelines tools are developed on the side :
 
 - [CookieCutter Capitains](https://github.com/Capitains/docker-cookiecutter-guidelines) provides a simple way to kickstart a repository using CookieCutter.
+
+
+## Sparrow (JavaScript)
+
+[![CapiTainS Sparrow](/assets/images/Sparrow.png)](https://github.com/capitains/Sparrow)
+
+CapiTainS Sparrow is a library, an abstraction for CTS. It provides simple and easy-to-use commands to query CTS APIs as well as parsing results resources.
+
+**Relates resources** :
+
+- [Documentation](https://github.com/Capitains/docker-hooktest)
+- [jQuery Typeahead](https://github.com/Capitains/jQuery.typeahead) retrieve resources and passages using a simple fulltext search tool on CTS inventories.
+- [Journey Of The Hero](http://www.perseids.org/sites/joth/) was developed using full frontend technologies and Sparrow for CTS API communication and parsing
+- [jQuery Selector plugin](https://github.com/Capitains/jQuery.selector) : list resources and retrieve them using form boxes *(Development on hold)*
+- [jQuery Service Plugin](https://github.com/Capitains/jQuery.service) implements a simple way to call API Services using CTS data *(Development on hold)*
+- [jQuery XSLT Plugin](https://github.com/Capitains/jQuery.xslt) implements a simple way to use XSLT (with parameters) using CTS Data *(Development on hold)*
+- [Nemo for AngularJS](https://github.com/angular-nemo) was a quick demo tool to show the potential uses of Sparrow *(Development on hold)*

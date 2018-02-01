@@ -26,11 +26,3 @@ CapiTainS is an informal open-source organization which aims at providing a suit
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-
-## Pages you might be interested in 
-
-<ul>
-{% assign pages_list = site.pages %}
-{% assign group = 'navigation' %}
-{% include JB/pages_list %}
-</ul>

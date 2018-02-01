@@ -25,17 +25,4 @@ description: ""
 
 <h2> Nemo and Nautilus Tutorials </h2>
 
-<div class="row">
-    <div class="col-md-6">
-        <h3>Nemo and Nautilus on Mac and Windows using Docker</h3>
-        <div class="video-container ">
-            <iframe src="https://www.youtube.com/embed/_Vmwz_761GM" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <h3>Advanced customization of Nemo and Nautilus with Docker</h3>
-        <div class="video-container ">
-            <iframe src="https://www.youtube.com/embed/n277IGNg97U" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
+<div><p>The tutorial of Nemo and Nautilus has been transformed into an online written tutorial : <a href="https://github.com/Capitains/tutorial-nemo/blob/master/README.md">Visit it here</a></p></div>
