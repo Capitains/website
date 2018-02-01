@@ -45,7 +45,7 @@ Nemo is a web frontend providing a user interface on top of a CTS API. It's high
 
 ### Nautilus for Flask (Python)
 
-[![CapiTainS Nautilus for Flask](/assets/images/CTS_API.png)](https://github.com/capitains/Nautilus)
+[![CapiTainS Nautilus for Flask](/assets/images/Nautilus.png)](https://github.com/capitains/Nautilus)
 
 Nautilus provides a backend CTS API implementation relying on local files. It provides high maintainability and good scalabilty scores.
 
