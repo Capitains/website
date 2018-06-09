@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CapiTainS
-tagline: Software suite and guidelines for Citable Text
+tagline: Software suite and guidelines for Citable Texts
 logo: /assets/images/logo.png
 ---
 

@@ -1,0 +1,22 @@
+---
+layout: page
+title: "FAQ"
+header: "FAQ"
+group: navigation
+description: ""
+---
+{% include JB/setup %}
+
+**Index :**
+
+* TOC
+{:toc}
+
+## I can't find my question !
+
+The FAQ is ever changing and we welcome any question. If you feel shy about it, you can contact us easily in our respective institutions (Thibault Clérice - [chartes.psl.eu](chartes.psl.eu), Bridget Almas - [Alpheios.net](Alpheios.net), Matt Munson - [Formulae Project](https://www.formulae.uni-hamburg.de/unser-team.html)). If you feel okay with it, you can also open a discussion [here](https://github.com/Capitains/website/issues) and we'll discuss and reply with you happily !
+
+## I am lost in the software suite, what should I use ?
+
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;target&quot;:&quot;blank&quot;,&quot;lightbox&quot;:false,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile userAgent=\&quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0\&quot; version=\&quot;8.7.6\&quot; editor=\&quot;www.draw.io\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;6a731a19-8d31-9384-78a2-239565b7b9f0\&quot; name=\&quot;Page-1\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
