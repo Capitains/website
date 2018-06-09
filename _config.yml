@@ -17,10 +17,10 @@ kramdown:
 # so be sure to set them if your theme uses them.
 #
 title : CapiTainS
-tagline: A tool suite for the CTS norm
+tagline: A tool suite for making and using Citable Texts
 author :
   name : Thibault Clérice
-  email : thibault.clerice@uni-leipzig.de
+  email : thibault.clerice@chartes.psl.eu
   github : ponteineptique
   twitter : ponteineptique
 
@@ -32,7 +32,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://Capitains.github.io
+production_url : http://capitains.org
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
