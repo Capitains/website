@@ -9,6 +9,8 @@ logo: /assets/images/logo.png
 
 CapiTainS is an informal open-source organization which aims at providing a suite of tools and guidelines for Citable Text APIs standards. Developers, guidelines contributor and more generally users are all welcome to join. You can contact us on github but more generally on [googlegroups](https://groups.google.com/forum/#!forum/capitains). You can find a few tutorials on our [youtube channel](https://www.youtube.com/channel/UCvwGuaIuATNfnM_TwhPMn7w). You can also contact individually the main maintainers of this repository on twitter : [Thibault Clérice](https://twitter.com/PonteIneptique) and [Bridget Almas](https://twitter.com/BridgetAlmas)
 
+**Cite as** `Thibault Clérice, Matthew Munson, & Bridget Almas. (2017, May 2). Capitains/Capitains.github.io: 2.0.0 (Version 2.0.0). Zenodo. http://doi.org/10.5281/zenodo.570516`
+
 ## Why you should browse and use our tools (and stay on this website longer)
 
 - you have texts which you would like to make available as **digital editions**
